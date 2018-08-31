@@ -1,0 +1,28 @@
+<html>
+    <style>
+        
+    </style>
+
+    <script>
+        function add(){
+            var textbox1 = window.document.f.x;
+            var textbox2 = window.document.f.y;
+            var textbox3 = window.document.f.z;
+            textbox3.value = parseInt(textbox1.value) + parseInt(textbox2.value);
+            textbox3.focus();
+        }
+    </script>
+    <form name = "f">
+        <input name = "x">
+        <input name = "y"> <BR>
+        <input type = "button" onclick = "add()" style = position:absolute 
+        left: 50%
+        top: 50%
+        
+        
+        
+        
+        value = "click" > <BR>
+        <input name = "z"> <BR>
+    </form>
+</html>

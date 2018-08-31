@@ -1,0 +1,48 @@
+<html>
+    <script>
+       
+        function sportsin(){
+          
+            document.getElementById("drop2").style.visibility="visible";
+            document.getElementById("drop1").style.visibility="hidden";
+        }
+        
+        function countriesin(){
+          
+            document.getElementById("drop2").style.visibility="hidden";
+            document.getElementById("drop1").style.visibility="visible";
+        }
+            
+        function barin(ref){
+            ref.style.background = 'blue';
+        }     
+
+        function barout(ref){
+            ref.style.background = 'white';
+        }  
+        function bar(ref,c){
+            ref.style.background = c;
+        }
+
+             
+    </script>
+    
+    <body>
+
+        <span style = "position:absolute ; top:0% ; left:0%" onmouseenter="countriesin()"> Countries</span> 
+            <span id = "drop1" style="visibility:hidden">
+            <span id = "c1"    style = "position:absolute ; top:6% ; left:0%" onmouseenter="bar(this,'blue')" onmouseleave="barout(this,'white')"> UK </span>
+            <span id = "c2"    style = "position:absolute ; top:9% ; left:0%" onmouseenter="bar(this,'blue')" onmouseleave="barout(this,'white')"> USA </span> 
+            <span id = "c3"    style = "position:absolute ; top:12% ; left:0%" onmouseenter="bar(this,'blue')" onmouseleave="barout(this,'white')"> Spain </span>
+        </span>   
+    
+        <span  style = "position:absolute  ; top:0% ; left:12%"  onmouseenter = "sportsin()"> Sports</span>
+            <span id = "drop2" style="visibility:hidden">
+            <span id = "s1"    style = "position:absolute ; top:6% ; left:12%;" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')" onclick=""> Cricket</span>  
+            <span id = "s2"    style = "position:absolute ; top:9% ; left:12%" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')"> Tennis</span>
+            <span id = "s3"    style = "position:absolute ; top:12% ; left:12%" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')"> Football </span>       
+        </span>
+
+    </body>
+
+</html>

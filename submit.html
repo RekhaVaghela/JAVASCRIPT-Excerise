@@ -1,0 +1,41 @@
+<html>
+    <script>
+        
+        function check(){        
+            var r=true;
+            
+            if (document.getElementById("A1").value==""){
+                document.getElementById("user_span").style.visibility = "visible";
+                document.getElementById("A1").focus();
+                r=false;
+
+            }
+            else{  
+                document.getElementById("user_span").style.visibility = "hidden";
+            }
+            
+            if (document.getElementById("B2").value==""){
+                document.getElementById("pass_span").style.visibility = "visible";
+                document.getElementById("B2").focus();
+                r=false;
+            }
+            else{  
+                document.getElementById("pass_span").style.visibility = "hidden";
+            }
+                        
+            if (r){
+                window.document.getElementById("form").submit();
+            }
+            return r;
+        }
+        
+    </script>
+    <form id = "form" action = "process.html" method = "post" >
+        <BR> Username:<input type = "text" name = "A" id = "A1"> 
+        <span id = "user_span" style = "color:red ; visibility: hidden"> No Username</span> </BR>
+        <BR> Password:<input type = "text" name = "B" id = "B2"> 
+        <span id = "pass_span" style = "color:red ; visibility: hidden"> No Password</span> </BR></BR>
+        <image src = "tick.png" style = "position:absolute ; margin: 10% ; top: 10px; height:15mm ; width:15mm" onclick="check()">
+    </form>  
+
+</html>

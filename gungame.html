@@ -1,0 +1,52 @@
+<html>
+
+    <script>
+        var x = 0
+        var timer;
+        function move(){
+            var gun = document.getElementById("gun")
+            
+            if(event.keyCode == 37) {x -= 10;}
+            if(event.keyCode == 39) {x += 10;}
+            if(x < 0) {x=0} 
+            if(x>100){x=100}
+            gun.style.left = x.toString() + "%"
+        }
+        function starttimer(){
+            timer=window.setInterval(count,1000);
+        }
+        function stoptimer(){
+            window.clearInterval(timer);
+        }
+        function count(){
+            var T = document.getElementById("T");
+            var data = parseInt(T.value)+1;
+            T = document.getElementById("T").value = data
+        }
+        function moveobject(){
+            var star = document.getElementById("*")
+        }
+
+    </script>
+
+    <body onkeydown = "move()">
+
+        <input id = "T" value = "0"> <br>
+        <input type = "button" value = "Start Timer" onclick = "starttimer()">
+        <br>
+        <input type = "button" value = "Stop Timer" onclick = "stoptimer()">
+        <br>
+
+        <span id = "*">*</span>
+        <span id = "gun" style = "position:absolute ; bottom:0% ; left:0%" >
+
+        <pre>     
+              ||
+            ------           
+        </pre>
+
+        </span>
+
+    </body>
+
+</html>

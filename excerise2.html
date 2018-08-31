@@ -1,0 +1,37 @@
+<HTML>
+    <script>
+        function add(){
+            var a =window.document.f2.t1.value;
+             var b =window.document.f2.t2.value;
+             var c = parseInt(a) + parseInt(b);
+             window.document.f2.t3.value=c;
+        }
+        function sub(){
+            var a =window.document.f2.t1.value;
+             var b =window.document.f2.t2.value;
+             var c = parseInt(a) - parseInt(b);
+             window.document.f2.t3.value=c;
+        }
+         function multiply(){
+            var a =window.document.f2.t1.value;
+             var b =window.document.f2.t2.value;
+             var c = parseInt(a) * parseInt(b);
+             window.document.f2.t3.value=c;
+        }
+         function divide(){
+            var a =window.document.f2.t1.value;
+             var b =window.document.f2.t2.value;
+             var c = parseInt(a) / parseInt(b);
+             window.document.f2.t3.value=c;
+        }
+    </script>
+    <form name = "f2">
+        <B>First No: </B> <input type = "Text" name = "t1"> <BR>
+            <B>Second No: </B> <input type = "Text" name = "t2"> <BR>
+                <input type = "Button" value = "+" onclick = "add()">
+                <input type = "Button" value = "-" onclick = "sub()">
+                <input type = "Button" value = "*" onclick = "multiply()">
+                <input type = "Button" value = "/" onclick = "divide()">
+                <B> Result</B>: <input type = "text" name = "t3">
+    </form>            
+</HTML>

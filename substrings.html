@@ -1,0 +1,53 @@
+<html>
+    <script>
+        function UpperCase(){
+            var str = window.document.f1.t1.value;
+            var output = "";
+            for (x = 0 ; x < str.length ; x++){
+                if ((str[x] >= 'A' && str[x] <= 'Z') || str[x] == '  '){
+                    output = output + str[x]
+                }
+            }
+            window.document.f1.t2.value = output
+        }
+        function LowerCase(){
+            var str = window.document.f1.t1.value;
+            var output = "";
+            for (x = 0 ; x < str.length ; x++){
+                if ((str[x] >= 'a' && str[x] <= 'z') || str[x] == '  '){
+                    output = output + str[x]
+                }
+            } 
+            window.document.f1.t2.value = output
+        }
+        function Numbers(){
+            var str = window.document.f1.t1.value;
+            var output = "";
+            for (x = 0 ; x < str.length ; x++){
+                if ((str[x] >= '0' && str[x] <= '9') || str[x] == '  '){
+                    output = output + str[x]
+                }
+            }
+            window.document.f1.t2.value = output
+        }
+        function SpecialChar(){
+            var str = window.document.f1.t1.value;
+            var output = "";
+            for (x = 0 ; x < str.length ; x++){
+                if(!(str[x] >= 'A' && str[x] <= 'Z')    &&    !(str[x] >= 'a' && !str[x] <= 'z')    &&     !(str[x] >= '0' && !str[x] <= '9')){
+                    output = output + str[x]
+                }
+            }
+            window.document.f1.t2.value = output
+        }
+    </script>
+    
+    <form name = "f1">
+        <B> Message </B> <input type = "text" name = "t1"> <BR>
+            <input type = "Button" value = "ABC" onclick = "UpperCase()">
+            <input type = "Button" value = "abc" onclick = "LowerCase()">
+            <input type = "Button" value = "123" onclick = "Numbers()">
+            <input type = "Button" value = ",*/" onclick = "SpecialChar()"> <BR>
+             <B> Output</B>: <input type = "text" name = "t2">
+    </form>
+</html>

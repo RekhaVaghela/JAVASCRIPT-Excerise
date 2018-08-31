@@ -1,0 +1,71 @@
+<html>
+    <script>
+       
+        function hover(str){
+          
+            document.getElementById(str).style.visibility="visible";
+            alert(document.getElementById(str).style.visibility);
+            /* if (str == 'drop1'){
+                document.getElementById("c1").style.visibility = "visible";
+                document.getElementById("c2").style.visibility = "visible";
+                document.getElementById("c3").style.visibility = "visible";               
+            }
+            else{
+                if(str == 'drop2'){
+                    document.getElementById("s1").style.visibility = "visible";
+                    document.getElementById("s2").style.visibility = "visible";
+                    document.getElementById("s3").style.visibility = "visible";
+                }
+            }
+            */
+            
+        }
+        function leave(str){
+            if (str == 'drop1'){
+                document.getElementById("c1").style.visibility = "hidden";
+                document.getElementById("c2").style.visibility = "hidden";
+                document.getElementById("c3").style.visibility = "hidden";               
+            }
+            else{
+                if(str == 'drop2'){
+                    document.getElementById("s1").style.visibility = "hidden";
+                    document.getElementById("s2").style.visibility = "hidden";
+                    document.getElementById("s3").style.visibility = "hidden";
+                }
+            }
+        }  
+        function background(O){
+            var sp = window.document.getElementById("sp");
+            sp.style.color = O.style.background;
+        }        
+        
+    </script>
+    
+    <body>
+
+        <span onmouseenter = "hover('drop1')" onmouseout = "leave('drop1')">
+
+        <span id = "drop1" style = "position:absolute  ; top:0% ; left:0%" > Countries</span> 
+        <span id = "c1"    style = "visibility: hidden ; position:absolute ; top:6% ; left:0%" onmousemove = > Uk </span>
+        <span id = "c2"    style = "visibility: hidden ; position:absolute ; top:9% ; left:0%"> USA </span> 
+        <span id = "c3"    style = "visibility: hidden ; position:absolute ; top:12% ; left:0%"> Spain </span>
+        
+        </span>
+    
+      
+        
+        <span  style = "position:absolute  ; top:0% ; left:12%"  onmouseenter = "hover('drop2')" onmouseout = "leave('drop2')"> Sports</span>
+
+        <span id = "drop2" onmouseenter = "hover('drop2')" onmouseout = "leave('drop2')">
+            <span id = "s1"    style = "visibility: hidden ; position:absolute ; top:6% ; left:12%"> Cricket</span>  
+            <span id = "s2"    style = "visibility: hidden ; position:absolute ; top:9% ; left:12%"> Tennis</span>
+            <span id = "s3"    style = "visibility: hidden ; position:absolute ; top:12% ; left:12%"> Football </span>       
+        </span>
+
+    </body>
+    
+    <span Style = "position:absolute ; top:0 ; left:0 " id ="sp">
+        
+    </span>
+
+</html>

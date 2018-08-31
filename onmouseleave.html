@@ -1,0 +1,35 @@
+<html>
+    <script>
+        var fs = 10;
+        function moving(){
+            var sp = window.document.getElementById("sp");
+            sp.style.top = window.event.clientY;
+            sp.style.left = window.event.clientX;
+            if(window.event.ctrlKey){
+                ++fs;
+            }
+            if(window.event.altKey){
+                --fs;
+            }
+            sp.style.fontSize = fs;
+        }
+        function pickup(){
+            var a = window.document.getElementById("sp")
+            var T = window.document.getElementById("txt")
+            sp.innerHTML = T.value;
+            T.value = "";
+        }
+    </script>  
+    
+    <body onmousemove = "moving()"> 
+        <input type = "text" onmouseout ="pickup()" style = "position:absolute ; top: 50% ; left: 50%" id = "txt">
+
+    </body>
+
+    <span Style = "position:absolute ; top:0 ; left:0 " id ="sp">
+        
+    </span>
+
+    
+
+</html>

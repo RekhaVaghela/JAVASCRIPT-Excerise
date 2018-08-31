@@ -1,0 +1,69 @@
+<html>
+
+    <script>
+       var x=0;
+       var optr="";
+        function number(ttt){
+           // var t = window.event.target.value;
+            var txt = window.document.getElementById("result").value+= ttt.value;
+           }
+        function operator(str){
+            if(str=="C"){
+                   window.document.getElementById("result").value=""; 
+            }
+            else{
+                optr=str;
+                x = parseInt(window.document.getElementById("result").value);
+                window.document.getElementById("result").value="";
+                }
+        }
+
+        function operation(){
+             y = parseInt(window.document.getElementById("result").value);
+             switch (optr) {
+                    case "+" : z = x + y; break;
+                    case "-" : z = x - y; break;
+                    case "*" : z = x * y; break;
+                    case "/" : z = x / y; break;
+                }
+            window.document.getElementById("result").value=z;               
+        }
+    </script>
+
+    <style>
+        input[type = button] {height:20mm ; width:20mm}
+        input[type = button] {font-size: 50px}
+    </style>
+
+
+    <body>
+        <br> <input type = "text" style = "height:15mm ; width:90mm;  font-size: 50px ; border-style: solid" id = "result"> </br> 
+
+        <br> <table border = "5"> </br>               
+            <tr>
+                <td> <input type = "button" onclick = "number(this)" value = "1"  id ="1"> </td>
+                <td> <input type = "button" onclick = "number(this)" value = "2" id ="2"> </td>
+                <td> <input type = "button" onclick = "number(this)" value = "3" id ="3"> </td>
+                <td> <input type = "button" onclick = "operator('+')" value = "+" id ="+"> </td>
+            </tr>
+            <tr>
+                <td> <input type = "button" onclick = "number(this)" value = "4" id ="4"> </td>
+                <td> <input type = "button" onclick = "number(this)" value = "5" id ="5"> </td>
+                <td> <input type = "button" onclick = "number(this)" value = "6" id ="6"> </td>
+                <td> <input type = "button" onclick = "operator('-')" value = "-" id ="-"> </td>
+            </tr>
+            <tr>
+                <td> <input type = "button" onclick = "number(this)" value = "7" id ="7"> </td>
+                <td> <input type = "button" onclick = "number(this)" value = "8" id ="8"> </td>
+                <td> <input type = "button" onclick = "number(this)" value = "9" id ="9"> </td>
+                <td> <input type = "button" onclick = "operator('*')" value = "*" id ="*"> </td>
+            </tr>
+            <tr>
+                <td> <input type = "button" onclick = "number(this)" value = "0" id ="0"> </td>
+                <td> <input type = "button" onclick = "operator('C')" value = "C" id ="C"> </td>
+                <td> <input type = "button" onclick = "operation()" value = "=" id ="p"> </td>
+                <td> <input type = "button" onclick = "operator('/')" value = "/" id ="pp"> </td>
+            </tr>
+        </table>
+    </body>
+</html>

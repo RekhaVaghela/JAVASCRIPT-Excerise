@@ -1,0 +1,45 @@
+<html>
+    <script>
+        var fs = 10;
+        function moving(){
+            var sp = window.document.getElementById("sp");
+            sp.style.top = window.event.clientY;
+            sp.style.left = window.event.clientX;
+            if(window.event.ctrlKey){
+                ++fs;
+            }
+            if(window.event.altKey){
+                --fs;
+            }
+            sp.style.fontSize = fs;
+        }
+        function pickup(){
+            var a = window.document.getElementById("sp")
+            var T = window.document.getElementById("txt")
+            sp.innerHTML = T.value;
+            T.value = "";
+        }
+        function font_color(O){
+            var sp = window.document.getElementById("sp");
+            sp.style.color = O.style.background;
+        }
+          
+    </script>  
+    
+    <body onmousemove = "moving()"> 
+        <input type = "text" onmouseout ="pickup()" style = "position:absolute ; top: 50% ; left: 50% ; height:30mm ; width:60mm ; margin:-100px" id = "txt">
+        <input type = "text" onmouseout ="font_color(this)" style = "background:pink ; position:absolute  ; top:0%  ; left:0% ; height:50mm ; width:50mm "id = "red">
+        <input type = "text" onmouseenter ="font_color(this)" style = "background:purple ; position:absolute  ; top:0%  ; right:0% ; height:50mm ; width:50mm"id = "orange">
+        <input type = "text" onmouseenter ="font_color(this)" style = "background:green ;  position:absolute  ; bottom:0%  ; right:0% ; height:50mm ; width:50mm "id = "green">
+        <input type = "text" onmouseenter ="font_color(this)" style = "background:cyan ;  position:absolute  ; bottom:0%  ; left:0% ; height:50mm ; width:50mm" id = "blue">
+
+    </body>
+
+    <span Style = "position:absolute ; top:0 ; left:0 " id ="sp">
+        
+    </span>
+
+    
+
+</html>
+

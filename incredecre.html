@@ -1,0 +1,17 @@
+<html>
+    <script>
+        function Increment(){
+            var T1 = window.document.getElementById("A");
+            T1.value = parseInt(T1.value)+1;
+        }
+        function Decrement(){
+            var T2 = window.document.getElementById("A");
+            T2.value=parseInt(T2.value)-1;
+        }
+    </script>
+    <form>
+        <input id ="A" value = "0">
+        <input type = "button" value = "Increment" onmousemove = "Increment()">
+        <input type = "button" value = "Decrement" onmousemove = "Decrement()">
+    </form>
+</html>

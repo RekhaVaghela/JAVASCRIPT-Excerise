@@ -1,0 +1,30 @@
+<html>
+    <script>        
+        var a = [ '', 'one', 'two' , 'three', 'four', 'five', 'six' , 'seven', 'eight', 'nine','ten',
+        'eleven','twelve','thirteen', 'fourteen','fifteen','sixteen', 'seventeen','eighteen','nineteen'];    
+        var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];  
+        function convert(num){
+            var num = parseInt(window.document.f.num.value);
+            if((num = num.toString()).length > 9) return overflow;
+            n = ('000000000' + num).substr(-9).match (/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+            if(!n) return; var output = '';
+            output += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + ' billion ' : '';
+            output += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + ' million ' : '';
+            output += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + ' thousand ' : '';
+            output += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + ' hundred ' : '';
+            output += (n[5] != 0) ? ((output != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' 
+                                                             + a[n[5][1]]) + '' : '';
+            return output;
+        }
+        function gdf() {
+            window.document.f.output.value = convert();
+        }
+
+    </script>
+    <form name = "f">
+        <input name = "num">
+        <input type = "button" onclick = "gdf()" value = "convert">
+        <input name = "output" size = "100"> 
+    </form>
+</html>
+        

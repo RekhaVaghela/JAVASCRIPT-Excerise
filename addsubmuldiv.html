@@ -1,0 +1,26 @@
+<HTML>
+    <script>
+        function operator(str){
+            var x = parseInt(window.document.f2.t1.value);
+             var y = parseInt(window.document.f2.t2.value);
+             var z;
+
+             switch (str) {
+                 case "+" : z = x + y; break;
+                 case "-" : z = x - y; break;
+                 case "*" : z = x * y; break;
+                 case "/" : z = x / y; break;
+             }
+             window.document.f2.t3.value=z.toString();
+        }
+    </script>
+    <form name = "f2">
+        <B>First No: </B> <input type = "Text" name = "t1"> <BR>
+            <B>Second No: </B> <input type = "Text" name = "t2"> <BR>
+                <input type = "Button" value = "+" onclick = "operator('+')">
+                <input type = "Button" value = "-" onclick = "operator('-')">
+                <input type = "Button" value = "*" onclick = "operator('*')">
+                <input type = "Button" value = "/" onclick = "operator('/')">
+                <B> Result</B>: <input type = "text" name = "t3">
+    </form>            
+</HTML>

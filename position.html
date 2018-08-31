@@ -1,0 +1,30 @@
+<html>
+    <script>
+        var fs = 10;
+        function moving(){
+            var boom = window.document.getElementById("a");
+            boom.style.top = window.event.clientY;
+            boom.style.left = window.event.clientX;          
+        }
+        function increment(){
+            var bang = window.document.getElementById("a");
+            bang.style.fontSize = ++fs;
+        } 
+        
+        function decrement(){
+            var bang = window.document.getElementById("a");
+            bang.style.fontSize = --fs;
+        }
+    </script>
+    <body onmousemove = "moving()"> 
+
+    </body>
+
+    <span Style = "position:absolute ; top:0 ; left:0 " id ="a">
+        QA Consulting
+    </span>
+
+    <br><br><br><br><br><br><br><input type="button" value="incrementttttttttttttttttttttttt" onmousemove="increment()">
+    <br><br><br><br><br><br><br><input type="button" value="Decrementttttttttttttttttttttttttt" onmousemove="decrement()">
+
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <script>
+       
+        function sportsin(){
+          
+            document.getElementById("drop2").style.visibility="visible";
+            document.getElementById("drop1").style.visibility="hidden";
+        }
+        
+        function countriesin(){
+          
+            document.getElementById("drop2").style.visibility="hidden";
+            document.getElementById("drop1").style.visibility="visible";
+        }
+
+        function bar(ref,c){
+            ref.style.background = c;
+        }
+        
+        function image(str){
+            document.getElementById(str).style.visibility="visible";           
+        }  
+    </script>
+    
+    <body>
+
+        <span style = "position:absolute ; top:0% ; left:0%" onmouseenter="countriesin()"> Countries</span> 
+            <span id = "drop1" style="visibility:hidden">
+            <span id = "c1"    style = "position:absolute ; top:6% ; left:0%" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')" onclick="image('uk')"> UK </span>            
+            <span id = "c2"    style = "position:absolute ; top:9% ; left:0%" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')"onclick="image('usa')"> USA </span> 
+            <span id = "c3"    style = "position:absolute ; top:12% ; left:0%" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')"onclick="image('spain')"> Spain </span>
+        </span>      
+    
+        <span  style = "position:absolute  ; top:0% ; left:12%"  onmouseenter = "sportsin()"> Sports</span>
+            <span id = "drop2" style="visibility:hidden">
+            <span id = "s1"    style = "position:absolute ; top:6% ; left:12%;" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')"> Cricket</span>  
+            <span id = "s2"    style = "position:absolute ; top:9% ; left:12%" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')"> Tennis</span>
+            <span id = "s3"    style = "position:absolute ; top:12% ; left:12%" onmouseenter="bar(this, 'blue')" onmouseleave="bar(this, 'white')"> Football </span>       
+        </span>
+
+        <span style = "position:absolute ; top:0% ; left:0%" onclick="image()"></span>
+            <span id = "img" style="visibility:hidden">
+                <img src = "UK.png" style = "position:absolute ; margin: 10% ; top: 10px; height:30mm ; width:40mm" id = "uk">
+                <img src = "USA.png" style = "position:absolute ; margin: 10% ; top: 10px; height:30mm ; width:40mm" id = "usa">
+                <img src = "spain.png" style = "position:absolute ; margin: 10% ; top: 10px; height:30mm ; width:40mm" id = "spain">
+            </span>
+
+        
+
+    </body>
+
+</html>
+

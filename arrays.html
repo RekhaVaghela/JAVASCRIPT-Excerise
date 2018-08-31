@@ -1,0 +1,21 @@
+<html>
+ 
+    <script>
+        function add(){
+            var no1 = window.document.forms[0].elements[0].value;
+            var no2 = window.document.forms[0].elements[1].value;
+            var Result = parseInt(no1) + parseInt(no2);
+            window.document.forms[0].elements[3].value= Result;            
+        }
+    </script>
+    
+    <form>
+        <input><input>
+        <input type = "button" onclick = "add()" value = "+" > <BR>
+        <input>
+    </form>
+    <form>
+        <input><input><input>
+    </form>    
+    
+</html>
